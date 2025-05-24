@@ -1,1 +1,2 @@
 moviepy
+ibm-watson>=7.0.0

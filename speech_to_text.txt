@@ -1,0 +1,2 @@
+api_key = 0n8PpNRA-R_6iym8Fl0tL3Jf7kywktSY7g2aZxTyFPDY
+url = https://api.eu-de.speech-to-text.watson.cloud.ibm.com/instances/22f45bc5-f1f0-4d61-affe-5fbc5d800547

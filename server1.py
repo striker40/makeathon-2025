@@ -47,3 +47,14 @@ def process_text():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+#pip install flask werkzeug moviepy ibm-watson ibm-cloud-sdk-core google-generativeai pypdf
+#Start the Flask backend: python server.py
+
+#Start your React frontend: npm start
+
+#Go to Home → upload files
+
+#Go to Downloads → click "Get Summary", "Get QnA", or "Get Quizzes"
+
+#You should see the result from Gemini via Flask!

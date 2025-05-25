@@ -348,6 +348,133 @@ body {
   border: 2px dashed #6495ed;
 }
 
+.sort-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.sort-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #fff0f5;
+  color: #ff69b4;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.sort-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 105, 180, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.sort-btn.clicked::before {
+  width: 200%;
+  height: 200%;
+}
+
+.search-result-item {
+  background-color: #fff0f5;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 0 #d87093;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.search-result-item::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 105, 180, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.search-result-item.clicked::before {
+  width: 200%;
+  height: 200%;
+}
+
+.search-result-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 0 #d87093;
+}
+
+.sort-btn:hover {
+  background-color: #ff69b4;
+  color: white;
+}
+
+.sort-btn.active {
+  background-color: #ff69b4;
+  color: white;
+}
+
+.search-results-grid {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+}
+
+.search-result-item {
+  background-color: #fff0f5;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 0 #d87093;
+}
+
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.user {
+  color: #800080;
+  font-size: 14px;
+}
+
+.rating-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.rating {
+  color: #ff69b4;
+  font-weight: bold;
+}
+
+.users {
+  color: #800080;
+  font-size: 14px;
+}
+
+.type {
+  color: #ff69b4;
+  font-size: 14px;
+}
+
 .post-it-grid {
   display: flex;
   gap: 20px;

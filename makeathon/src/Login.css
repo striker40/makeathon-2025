@@ -1,0 +1,51 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #fff0f5;
+  font-family: 'Comic Neue', cursive;
+}
+
+.login-logo {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.login-title {
+  font-size: 32px;
+  color: #ff69b4;
+  margin-bottom: 20px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 250px;
+}
+
+.login-input {
+  padding: 10px;
+  border: 2px dashed #ffb6c1;
+  border-radius: 12px;
+  font-size: 16px;
+  background-color: #fffafa;
+  box-shadow: 2px 2px 0 #db7093;
+}
+
+.login-button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #ffa07a;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 #d2691e;
+}
+
+.login-button:hover {
+  background-color: #ff7f50;
+}

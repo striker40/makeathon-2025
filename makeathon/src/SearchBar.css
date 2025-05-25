@@ -11,6 +11,31 @@
   box-shadow: 2px 2px 0 #d87093;
 }
 
+
 .search-bar::placeholder {
   color: #800080;
+}
+
+.search-button {
+  font-family: 'Comic Neue', cursive;
+  font-size: 14px;
+  padding: 6px 12px;
+  background-color: #ffa07a;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 #d2691e;
+}
+
+.search-button:hover {
+  background-color: #ff7f50;
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* more space between input and button */
+  margin-left: 20px; /* keeps it to the left */
+  margin-top: 10px;
+  margin-bottom: 10px;
 }

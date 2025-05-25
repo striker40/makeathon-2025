@@ -38,11 +38,13 @@ function Downloads() {
     <div className="App">
       <div className="background-logo" style={{ backgroundImage: `url(${companyLogo})` }} />
       <div className="app-header">
-        <img src={appLogo} alt="Summarease" className="header-logo" />
+        <Link to="/" className="logo-link">
+          <img src={appLogo} alt="Summarease" className="header-logo" />
+        </Link>
         <nav className="nav-menu">
           <Link to="/" className="nav-item">Home</Link>
           <Link to="/downloads" className="nav-item">Downloads</Link>
-          <Link to="/history" className="nav-item">History</Link>
+          <Link to="/history" className="nav-item">User History</Link>
         </nav>
       </div>
       
@@ -61,7 +63,69 @@ function Downloads() {
               <>
                 <div className="service-header">
                   <h2>{selectedMode === 1 ? 'Summary' : selectedMode === 2 ? 'Q&A' : 'Quiz'}</h2>
-                  <button className="btn eraser close" onClick={() => setSelectedMode(null)}>Close</button>
+                  <div className="header-buttons">
+                    {selectedMode === 1 && (
+                      <button 
+                        className="btn eraser download"
+                        onClick={() => {
+                        // Create a link element
+                        const element = document.createElement('a');
+                        // Set the href to point to the actual file
+                        element.href = '../../../output/relational_algebra_summary.txt';
+                        // Set the download attribute
+                        element.download = 'relational_algebra_summary.txt';
+                        // Append to body and trigger click
+                        document.body.appendChild(element);
+                        element.click();
+                        // Clean up
+                        document.body.removeChild(element);
+                      }}
+                      >
+                        Download
+                      </button>
+                    )}
+                    {selectedMode === 2 && (
+                      <button 
+                        className="btn eraser download"
+                        onClick={() => {
+                        // Create a link element
+                        const element = document.createElement('a');
+                        // Set the href to point to the actual file
+                        element.href = '../../../output/mit_oop_qna.txt';
+                        // Set the download attribute
+                        element.download = 'mit_oop_qna.txt';
+                        // Append to body and trigger click
+                        document.body.appendChild(element);
+                        element.click();
+                        // Clean up
+                        document.body.removeChild(element);
+                      }}
+                      >
+                        Download
+                      </button>
+                    )}
+                    {selectedMode === 3 && (
+                      <button 
+                        className="btn eraser download"
+                        onClick={() => {
+                        // Create a link element
+                        const element = document.createElement('a');
+                        // Set the href to point to the actual file
+                        element.href = '../../../output/mit_oop_quiz.txt';
+                        // Set the download attribute
+                        element.download = 'mit_oop_quiz.txt';
+                        // Append to body and trigger click
+                        document.body.appendChild(element);
+                        element.click();
+                        // Clean up
+                        document.body.removeChild(element);
+                      }}
+                      >
+                        Download
+                      </button>
+                    )}
+                    <button className="btn eraser close" onClick={() => setSelectedMode(null)}>Close</button>
+                  </div>
                 </div>
                 <div className="markdown-container">
                   <ReactMarkdown

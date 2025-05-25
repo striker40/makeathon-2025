@@ -7,6 +7,8 @@ import companyLogo from './assets/creme_brulee.jpg';
 import { Link } from 'react-router-dom';
 import SearchBar from './SearchBar';
 
+document.title = 'Summarease';
+
 function Home() {
   const navigate = useNavigate();
   const [selectedFiles, setSelectedFiles] = useState([]);
@@ -94,7 +96,10 @@ function Home() {
       </header>
 
       <main className="content">
-        <h1>Welcome to Summarease</h1>
+        <h1 style={{ color: 'black' }}>
+          Welcome back to Summarease,<br />
+          Striker
+        </h1>
         
         {showSuccess && (
           <div className="success-message">

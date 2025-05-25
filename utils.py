@@ -152,21 +152,7 @@ def extract_text_from_response(response):
                 return first_part.text
     return ""
 
-from flask import Flask, request, jsonify, send_file
-from flask_cors import CORS
-
-app = Flask(__name__)
-CORS(app)
-
-@app.route('/output/<path:filename>')
-def serve_file(filename):
-    try:
-        return send_file(f'output/{filename}')
-    except FileNotFoundError:
-        return "File not found", 404
-
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
     print("1. EXTRACT TEXT FROM PDF")
     print("2. TRANSCRIBE VIDEO")
     print("3. GENERATE OUTPUT")

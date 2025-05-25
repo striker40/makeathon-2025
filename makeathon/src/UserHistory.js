@@ -26,6 +26,18 @@ function StarRating({ rating, onRate }) {
   );
 }
 
+function ProgressLevel() {
+  return (
+    <div className="progress-level">
+      <div className="level-label">Lvl 2</div>
+      <div className="progress-container">
+        <div className="progress-bar" style={{ width: '40%' }}></div>
+      </div>
+      <div className="progress-percentage">40%</div>
+    </div>
+  );
+}
+
 function UserHistory() {
   const initialHistory = [
     { id: 1, title: 'Summary - Relational Algebra', type: 'Summary', rating: 0 },
@@ -48,9 +60,9 @@ function UserHistory() {
       <div className="background-logo" style={{ backgroundImage: `url(${companyLogo})` }} />
 
       <header className="app-header">
-        <div style={{ display: 'flex', alignItems: 'center' }}>
-          <img src={appLogo} alt="App Logo" className="header-logo" />
-        </div>
+        <Link to="/" className="logo-link">
+          <img src={appLogo} alt="Summarease" className="header-logo" />
+        </Link>
         <nav className="nav-menu">
           <Link to="/" className="nav-item">Home</Link>
           <Link to="/downloads" className="nav-item">Downloads</Link>
@@ -72,6 +84,9 @@ function UserHistory() {
               />
             </div>
           ))}
+        </div>
+        <div className="bottom-progress">
+          <ProgressLevel />
         </div>
       </main>
     </div>

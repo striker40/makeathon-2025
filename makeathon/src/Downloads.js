@@ -42,7 +42,7 @@ function Downloads() {
         <nav className="nav-menu">
           <Link to="/" className="nav-item">Home</Link>
           <Link to="/downloads" className="nav-item">Downloads</Link>
-          <Link to="/history" className="nav-item">History</Link>
+          <Link to="/history" className="nav-item">User History</Link>
         </nav>
       </div>
       
@@ -56,34 +56,75 @@ function Downloads() {
         </div>
 
         <div className="services-section">
-          <div className="service-display">
-            {selectedMode && markdownContent && (
-              <>
-                <div className="service-header">
-                  <h2>{selectedMode === 1 ? 'Summary' : selectedMode === 2 ? 'Q&A' : 'Quiz'}</h2>
+          {selectedMode && markdownContent && (
+            <div className="service-display">
+              <div className="service-header">
+                <h2>{selectedMode === 1 ? 'Summary' : selectedMode === 2 ? 'Q&A' : 'Quiz'}</h2>
+                <div style={{ display: 'flex', gap: '10px' }}>
+                  {selectedMode === 1 && (
+                    <a 
+                      href="/output/relation_algebra.txt" 
+                      download="relation_algebra.txt"
+                      className="btn eraser download"
+                      style={{ 
+                        backgroundColor: '#4CAF50', 
+                        color: 'white',
+                        textDecoration: 'none'
+                      }}
+                    >
+                      Download
+                    </a>
+                  )}
+                  {selectedMode === 2 && (
+                    <a 
+                      href="/output/mit_oop_qna.txt" 
+                      download="mit_oop_qna.txt"
+                      className="btn eraser download"
+                      style={{ 
+                        backgroundColor: '#4CAF50', 
+                        color: 'white',
+                        textDecoration: 'none'
+                      }}
+                    >
+                      Download
+                    </a>
+                  )}
+                  {selectedMode === 3 && (
+                    <a 
+                      href="/output/mit_oop_quiz.txt" 
+                      download="mit_oop_quiz.txt"
+                      className="btn eraser download"
+                      style={{ 
+                        backgroundColor: '#4CAF50', 
+                        color: 'white',
+                        textDecoration: 'none'
+                      }}
+                    >
+                      Download
+                    </a>
+                  )}
                   <button className="btn eraser close" onClick={() => setSelectedMode(null)}>Close</button>
                 </div>
-                <div className="markdown-container">
-                  <ReactMarkdown
-                    remarkPlugins={[remarkGfm]}
-                    rehypePlugins={[rehypeRaw, rehypeHighlight]}
-                    components={{
-                      p: ({ children }) => <p className="markdown-content">{children}</p>,
-                      h1: ({ children }) => <h1 className="markdown-content">{children}</h1>,
-                      h2: ({ children }) => <h2 className="markdown-content">{children}</h2>,
-                      h3: ({ children }) => <h3 className="markdown-content">{children}</h3>,
-                      ul: ({ children }) => <ul className="markdown-content">{children}</ul>,
-                      ol: ({ children }) => <ol className="markdown-content">{children}</ol>,
-                      li: ({ children }) => <li className="markdown-content">{children}</li>
-                    }}
-                  >
-                    {markdownContent}
-                  </ReactMarkdown>
-                  <button className="submit-button">Submit Files</button>
-                </div>
-              </>
-            )}
-          </div>
+              </div>
+              <div className="markdown-container">
+                <ReactMarkdown
+                  remarkPlugins={[remarkGfm]}
+                  rehypePlugins={[rehypeRaw, rehypeHighlight]}
+                  components={{
+                    p: ({ children }) => <p className="markdown-content">{children}</p>,
+                    h1: ({ children }) => <h1 className="markdown-content">{children}</h1>,
+                    h2: ({ children }) => <h2 className="markdown-content">{children}</h2>,
+                    h3: ({ children }) => <h3 className="markdown-content">{children}</h3>,
+                    ul: ({ children }) => <ul className="markdown-content">{children}</ul>,
+                    ol: ({ children }) => <ol className="markdown-content">{children}</ol>,
+                    li: ({ children }) => <li className="markdown-content">{children}</li>
+                  }}
+                >
+                  {markdownContent}
+                </ReactMarkdown>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>

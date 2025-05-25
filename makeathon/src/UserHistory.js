@@ -50,6 +50,7 @@ function UserHistory() {
       <header className="app-header">
         <div style={{ display: 'flex', alignItems: 'center' }}>
           <img src={appLogo} alt="App Logo" className="header-logo" />
+          <SearchBar />
         </div>
         <nav className="nav-menu">
           <Link to="/" className="nav-item">Home</Link>

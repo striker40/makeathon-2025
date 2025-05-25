@@ -66,8 +66,10 @@ function SearchResults() {
 
       <header className="app-header">
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          <img src={appLogo} alt="App Logo" className="header-logo" />
-		  <SearchBar />
+          <Link to="/" className="logo-link">
+            <img src={appLogo} alt="App Logo" className="header-logo" />
+          </Link>
+          <SearchBar />
         </div>
         <nav className="nav-menu">
           <Link to="/" className="nav-item">Home</Link>

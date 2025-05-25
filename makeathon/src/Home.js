@@ -90,7 +90,7 @@ function Home() {
         </div>
         <nav className="nav-menu">
           <Link to="/" className="nav-item">Home</Link>
-          <Link to="/downloads" className="nav-item">Downloads</Link>
+          <Link to="/downloads" className="nav-item">Services</Link>
           <Link to="/history" className="nav-item">User History</Link>
         </nav>
       </header>

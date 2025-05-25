@@ -43,7 +43,7 @@ function Downloads() {
         </Link>
         <nav className="nav-menu">
           <Link to="/" className="nav-item">Home</Link>
-          <Link to="/downloads" className="nav-item">Downloads</Link>
+          <Link to="/downloads" className="nav-item">Services</Link>
           <Link to="/history" className="nav-item">User History</Link>
         </nav>
       </div>
@@ -143,7 +143,6 @@ function Downloads() {
                   >
                     {markdownContent}
                   </ReactMarkdown>
-                  <button className="submit-button">Submit Files</button>
                 </div>
               </>
             )}

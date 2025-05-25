@@ -1,0 +1,77 @@
+Okay, here are 10 frequent questions and answers about Object-Oriented Programming (OOP), based on the provided slides:
+
+**1.  What is an object in Python, and what does it consist of?**
+
+*   **Answer:** In Python, everything is an object. An object is an instance of a specific type (e.g., `int`, `string`, `list`, or a custom class). Every object has:
+    *   A type
+    *   An internal data representation (can be primitive or composite)
+    *   A set of procedures (methods) for interacting with the object.
+
+**2. What are the key advantages of using OOP?**
+
+*   **Answer:** The advantages of OOP are:
+    *   Bundling data and procedures that operate on that data into well-defined interfaces.
+    *   Divide-and-conquer development: Implement and test behavior of each class separately, increasing modularity.
+    *   Code reuse: Classes can be reused, and modules often define new classes.
+    *   Inheritance: Subclasses can redefine or extend the behavior of a superclass.
+
+**3. What is a class, and what's the difference between a class and an object?**
+
+*   **Answer:** A class is a blueprint or a template for creating objects.  It defines the attributes (data) and methods (functions) that the objects of that class will have.  An object is an *instance* of a class. Think of a class as a cookie cutter, and an object as the cookie you cut out.  You define the shape (class) and then create many cookies (objects) from it.
+
+**4. What are attributes?**
+
+*   **Answer:** Attributes are data and procedures that "belong" to a class.
+    *   Data attributes: These are the data (variables) associated with an object.  For example, a `Coordinate` object might have `x` and `y` as data attributes.
+    *   Methods (procedural attributes): These are functions that operate on the object's data. For example, a `Coordinate` object might have a `distance` method.
+
+**5. How do you create an instance of a class?**
+
+*   **Answer:** You create an instance of a class by calling the class name like a function, passing in any required arguments to the `__init__` method.  For example:
+    ```python
+    c = Coordinate(3, 4) # Creates an instance 'c' of the Coordinate class
+    ```
+
+**6. What is the `__init__` method used for?**
+
+*   **Answer:** The `__init__` method is a special method called a *constructor*. It's automatically called when a new instance of a class is created.  It's used to initialize the object's data attributes.  The first argument to `__init__` is always `self`, which refers to the object being created.
+    ```python
+    class Coordinate(object):
+        def __init__(self, x, y):
+            self.x = x
+            self.y = y
+    ```
+
+**7. What does the `self` parameter refer to in methods?**
+
+*   **Answer:** The `self` parameter refers to the instance of the class that the method is being called on.  It's a convention to name this parameter `self`. Python automatically passes the object itself as the first argument to a method.  You use `self` to access the object's attributes within the method.
+
+**8. How do you access the attributes and methods of an object?**
+
+*   **Answer:** You use the dot (`.`) operator to access attributes and methods of an object.
+    ```python
+    c = Coordinate(3, 4)
+    print(c.x)      # Accesses the 'x' attribute of the 'c' object.
+    print(c.distance(zero)) # Calls the 'distance' method of the 'c' object, passing 'zero' as the 'other' argument.
+    ```
+
+**9. What is the `__str__` method used for?**
+
+*   **Answer:** The `__str__` method is a special method that's called when you use the `print()` function on an object.  It should return a string representation of the object. If you don't define `__str__`, Python will use a default representation, which is usually not very informative.
+    ```python
+    class Coordinate(object):
+        def __str__(self):
+            return "<" + str(self.x) + "," + str(self.y) + ">"
+
+    c = Coordinate(3, 4)
+    print(c)  # Output: <3,4>
+    ```
+
+**10. How do you check if an object is an instance of a particular class?**
+
+*   **Answer:** You use the `isinstance()` function.  It takes two arguments: the object to check and the class.  It returns `True` if the object is an instance of the class (or a subclass of the class), and `False` otherwise.
+    ```python
+    c = Coordinate(3, 4)
+    print(isinstance(c, Coordinate)) # Output: True
+    print(isinstance(c, int))        # Output: False
+    ```

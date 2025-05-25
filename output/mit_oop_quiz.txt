@@ -1,0 +1,76 @@
+Okay, here's a multiple-choice quiz based on the concepts from the provided lecture slides on Object-Oriented Programming (OOP) in Python. I've focused on creating distractors (wrong answers) that are similar and potentially confusing to test your understanding.
+
+**Instructions:** Choose the *best* answer for each question.
+
+**Question 1:**
+
+Which of the following is NOT a characteristic of an object in Python?
+
+a)  A type
+b)  An internal data representation
+c)  A set of procedures for interaction
+d)  A physical manifestation in hardware.
+
+**Question 2:**
+
+What is the primary purpose of the `__init__` method in a Python class?
+
+a)  To define the class's attributes.
+b)  To create a string representation of the object.
+c)  To initialize the object's data attributes when an instance is created.
+d)  To define the class's methods.
+
+**Question 3:**
+
+What is the significance of the `self` parameter in a Python method?
+
+a)  It refers to the class itself.
+b)  It refers to the instance of the class on which the method is being called.
+c)  It's a placeholder and can be named anything.
+d)  It's only used in the `__init__` method.
+
+**Question 4:**
+
+Which of the following best describes the concept of data abstraction in OOP?
+
+a)  Making all data attributes public.
+b)  Hiding the internal representation of an object and providing a well-defined interface for interaction.
+c)  Creating complex data structures.
+d)  Using only primitive data types.
+
+**Question 5:**
+
+What is "garbage collection" in Python?
+
+a)  A process for sorting data within an object.
+b)  The automatic reclamation of memory occupied by objects that are no longer accessible.
+c)  A method for deleting files from the hard drive.
+d)  A manual process that the programmer must explicitly trigger.
+
+**Question 6:**
+
+What is the benefit of bundling data and procedures into classes in OOP?
+
+a)  It makes the code run faster.
+b)  It reduces the need for comments.
+c)  It enforces a specific coding style.
+d)  It organizes related data and behaviors, promoting modularity and reusability.
+
+**Question 7:**
+
+Which of the following statement about the difference of creating a class and using an instance of the class is most accurate?
+a) Creating a class involves defining class attributes, while using a class involves creating new instances of objects.
+b) Creating a class involves creating new instances of objects, while using a class involves defining class attributes.
+c) Creating a class and using a class are the same.
+d) Creating a class is not necessary in OOP.
+
+**Answer Key:**
+
+1.  **d) A physical manifestation in hardware.** (Objects are conceptual, not physical hardware.)
+2.  **c) To initialize the object's data attributes when an instance is created.** (The constructor.)
+3.  **b) It refers to the instance of the class on which the method is being called.** (It's the way the object refers to itself.)
+4.  **b) Hiding the internal representation of an object and providing a well-defined interface for interaction.** (This is the core of abstraction.)
+5.  **b) The automatic reclamation of memory occupied by objects that are no longer accessible.** (Important for memory management.)
+6.  **d) It organizes related data and behaviors, promoting modularity and reusability.**
+7.  **a) Creating a class involves defining class attributes, while using a class involves creating new instances of objects.**
+

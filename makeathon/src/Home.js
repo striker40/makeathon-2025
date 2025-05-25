@@ -1,5 +1,5 @@
 // src/Home.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './App.css';
 import appLogo from './assets/summarease.png';
@@ -11,6 +11,8 @@ function Home() {
   const navigate = useNavigate();
   const [selectedFiles, setSelectedFiles] = useState([]);
   const [dragOver, setDragOver] = useState(false);
+  const [successMessage, setSuccessMessage] = useState('');
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const handleFileSelect = (event) => {
     const files = Array.from(event.target.files);
@@ -18,13 +20,21 @@ function Home() {
   };
 
   const handleSubmit = () => {
-    if (selectedFiles.length === 0) return;
+    if (selectedFiles.length === 0) {
+      alert('Please select files first');
+      return;
+    }
+
+    setSuccessMessage('Files submitted successfully!');
+    setShowSuccess(true);
     
     // Clear the selected files after submission
     setSelectedFiles([]);
     
-    // You can add any additional submission logic here
-    alert('Files submitted successfully!');
+    // Redirect to Downloads page after 2 seconds
+    setTimeout(() => {
+      navigate('/downloads');
+    }, 2000);
   };
 
   const handleDragOver = (event) => {
@@ -85,6 +95,13 @@ function Home() {
 
       <main className="content">
         <h1>Welcome to Summarease</h1>
+        
+        {showSuccess && (
+          <div className="success-message">
+            {successMessage}
+          </div>
+        )}
+
         <div 
           className={`drop-zone ${dragOver ? 'drag-over' : ''}`} 
           onDragOver={handleDragOver}

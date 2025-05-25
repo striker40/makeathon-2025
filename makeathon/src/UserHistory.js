@@ -28,9 +28,9 @@ function StarRating({ rating, onRate }) {
 
 function UserHistory() {
   const initialHistory = [
-    { id: 1, title: 'Summary - Volcanoes', type: 'Summary', rating: 0 },
-    { id: 2, title: 'QnA - Photosynthesis', type: 'QnA', rating: 0 },
-    { id: 3, title: 'Quiz - Ancient Egypt', type: 'Quiz', rating: 0 },
+    { id: 1, title: 'Summary - Relational Algebra', type: 'Summary', rating: 0 },
+    { id: 2, title: 'QnA - MIT OOP', type: 'QnA', rating: 0 },
+    { id: 3, title: 'Quiz - MIT OOP', type: 'Quiz', rating: 0 },
   ];
 
   const [historyItems, setHistoryItems] = useState(initialHistory);

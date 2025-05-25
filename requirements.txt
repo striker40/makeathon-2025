@@ -2,4 +2,3 @@ moviepy
 ibm-watson>=7.0.0
 google-genai
 pypdf
-flask
